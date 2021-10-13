@@ -1,0 +1,51 @@
+###########################
+########## ALIASES ########
+###########################
+
+
+
+
+###########################
+########## NAVIGATION #####
+###########################
+
+alias home='cd /Users/samterry/'
+alias docs='cd ~/Documents'
+alias desk='cd ~/Desktop' 
+alias apps='cd /Applications'
+alias up='cd ..;pwd'
+alias ..='cd ..;pwd'
+alias ....='cd ../..;pwd'
+alias ......='cd ../../..;pwd'
+alias ........='cd ../../../..;pwd'
+alias ..........='cd ../../../../..;pwd'
+
+
+
+
+
+###########################
+########## SHORTCUTS ######
+###########################
+
+alias v='vim'
+alias l='ls -lhF'
+alias ll='ls -lahF'
+alias cl='clear'
+alias s='source ~/.zshrc'
+alias prof='vim ~/.dotfiles/zsh/.zshrc'
+alias oa='vim ~/.dotfiles/zsh/.zsh_aliases'
+alias histg='history | grep'
+alias py='python'
+alias py3='python3'
+
+
+
+
+###########################
+###### CORRECTIONS ########
+###########################
+
+alias deks='deks'
+alias dosc='docs'
+alias cd..='cd ..'
