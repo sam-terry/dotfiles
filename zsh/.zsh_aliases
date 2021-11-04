@@ -51,6 +51,7 @@ alias cpv='rsync -ah --progress'
 
 alias mkdir='mkdir -p'
 alias calendar='cal' # Both forms should serve the same function
+alias grep
 
 ###########################
 ###### CORRECTIONS ########
@@ -58,5 +59,4 @@ alias calendar='cal' # Both forms should serve the same function
 
 alias deks='deks'
 alias dosc='docs'
-alias hoem='home'
 alias cd..='cd ..'

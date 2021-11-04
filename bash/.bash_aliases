@@ -34,9 +34,9 @@ alias l='ls -lhF'
 alias ll='ls -lahF'
 alias c='clear'
 alias cl='clear;pwd;l'
-alias s='source ~/.zshrc'
-alias prof='vim ~/.dotfiles/zsh/.zshrc'
-alias oa='vim ~/.dotfiles/zsh/.zsh_aliases'
+alias s='source ~/.bashrc'
+alias prof='vim ~/.dotfiles/bash/.bashrc'
+alias oa='vim ~/.dotfiles/bash/.bash_aliases'
 alias histg='history | grep'
 alias py='python'
 alias py3='python3'
@@ -52,6 +52,7 @@ alias cpv='rsync -ah --progress'
 
 alias mkdir='mkdir -p'
 alias calendar='cal' # Both forms should serve the same function
+alias grep='grep -P' # Use Perl regular expressions with grep
 
 ###########################
 ###### CORRECTIONS ########
