@@ -51,7 +51,8 @@ alias cpv='rsync -ah --progress'
 
 alias mkdir='mkdir -p'
 alias calendar='cal' # Both forms should serve the same function
-alias grep
+alias grep='grep -P --color=auto'
+alias pip='pip3'
 
 ###########################
 ###### CORRECTIONS ########
