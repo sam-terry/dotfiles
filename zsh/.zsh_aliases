@@ -42,6 +42,7 @@ alias py='python'
 alias py3='python3'
 alias j='jobs'
 alias k='kill'
+alias h='home'
 alias cpv='rsync -ah --progress'
 alias lc='wc -l'
 
@@ -52,7 +53,7 @@ alias lc='wc -l'
 
 alias mkdir='mkdir -p'
 alias calendar='cal' # Both forms should serve the same function
-alias grep='grep -P --color=auto'
+alias grep='grep --color=auto'
 alias pip='pip3'
 
 ###########################
@@ -62,3 +63,10 @@ alias pip='pip3'
 alias deks='deks'
 alias dosc='docs'
 alias cd..='cd ..'
+
+
+###########################
+##### CUSTOM COMMANDS #####
+###########################
+
+alias ipa='cat ~/IPA.chart'

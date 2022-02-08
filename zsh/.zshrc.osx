@@ -12,7 +12,7 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 ###########################
 autoload -U colors
 colors
-PROMPT="%{$fg[red]%}%n%{$fg[yellow]%}%t %{$fg[green]%}%~ %{$fg[cyan]%}>> %{$fg[white]%}"
+PROMPT="%{$fg[red]%}%n %{$fg[yellow]%}%t %{$fg[green]%}%~ %{$fg[cyan]%}>> %{$fg[white]%}"
 
 
 ###########################
