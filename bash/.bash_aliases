@@ -9,7 +9,7 @@
 ########## NAVIGATION #####
 ###########################
 
-alias home='cd /Users/samterry/'
+alias home='cd /home/samterry/'
 alias docs='cd ~/Documents'
 alias desk='cd ~/Desktop' 
 alias apps='cd /Applications'
@@ -44,6 +44,7 @@ alias cpv='rsync -ah --info=progress2'
 alias j='jobs'
 alias k='kill'
 alias cpv='rsync -ah --progress'
+alias xx='exit'
 
 
 ###########################
