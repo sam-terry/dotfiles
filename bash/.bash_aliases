@@ -44,6 +44,7 @@ alias cpv='rsync -ah --info=progress2'
 alias j='jobs'
 alias k='kill'
 alias cpv='rsync -ah --progress'
+alias lc='wc -l'
 alias xx='exit'
 
 
