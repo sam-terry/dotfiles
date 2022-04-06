@@ -1,0 +1,8 @@
+Various configurations and dotfiles
+
+zsh -- config files for zsh
+bash -- config files for bash
+tmux -- config files for tmux
+
+
+zsh will be the most complete, but I should note that my configuration there depends on code from the oh-my-zsh repository
