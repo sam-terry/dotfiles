@@ -1,0 +1,7 @@
+
+# Compact date-time
+cdt() { date +'%Y%m%d-%H%M%S'; }
+
+# Date/timestamps; useful for file names
+dstamp() { date +'%Y-%m-%d'; }
+tstamp() { date +'%H.m.%S'; }
