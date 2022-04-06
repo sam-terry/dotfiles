@@ -1,23 +1,24 @@
 ###### LOAD ALIASES #######
 source ~/.dotfiles/zsh/.zsh_aliases
 
-###########################
+
 ###### LOAD COLORS ########
-###########################
 export CLICOLOR=YES
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
-###########################
+
+
+
 ####### COMMAND PROMPT ####
-###########################
 autoload -U colors
 colors
 PROMPT="%{$fg[red]%}%n %{$fg[yellow]%}%t %{$fg[green]%}%~ %{$fg[cyan]%}>> %{$fg[white]%}"
 
 
-###########################
+tmux new-ses -s Home;
+
+
 ### FUNCTION DEFINITIONS ##
-###########################
 
 # Compact date-time
 cdt() { date +'%Y%m%d-%H%M%S'; }
