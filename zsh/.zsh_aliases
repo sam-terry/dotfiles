@@ -47,6 +47,7 @@ alias cpv='rsync -ah --progress'
 alias lc='wc -l'
 alias xx='exit'
 alias browse='open "Brave Browser.app"'
+alias ltr='ll -tr'
 
 
 ###########################
