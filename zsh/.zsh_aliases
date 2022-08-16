@@ -9,7 +9,7 @@
 ########## NAVIGATION #####
 ###########################
 
-alias home='cd /Users/samterry/'
+alias home='cd ~' 
 alias docs='cd ~/Documents'
 alias desk='cd ~/Desktop' 
 alias apps='cd /Applications'
