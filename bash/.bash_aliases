@@ -53,6 +53,7 @@ alias ga='git add'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias tkt='tmux kill-ses -t'
+alias tls='tmux ls'
 
 ###########################
 ######### TWEAKS ##########
