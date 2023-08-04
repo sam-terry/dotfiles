@@ -100,5 +100,7 @@ source ~/.dotfiles/bash/.bash_aliases
 
 
 # Update prompt at startup
-chpwd
+cd .
+
+
 

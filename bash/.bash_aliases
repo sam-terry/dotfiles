@@ -61,7 +61,7 @@ alias tls='tmux ls'
 
 alias mkdir='mkdir -p'
 alias calendar='cal' # Both forms should serve the same function
-alias grep='grep -P' # Use Perl regular expressions with grep
+alias grep='ggrep -P' # Use Perl regular expressions with grep
 
 ###########################
 ###### CORRECTIONS ########
