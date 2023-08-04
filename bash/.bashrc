@@ -69,9 +69,11 @@ chpwd () {
 # Wrapper for git; updates prompt when changes are committed
 git() {
 	if [ $# -gt 0 ] && [ "$1" == "commit" ] ; then
-		shift;
-		command git commit $@;
-		cd .;
+		if [ $2 == "-m" ] || [ $3 == "-m" ]; then
+			argcount=$(($#-1));
+			command git commit ${@:2:$argcount-1} "${@: -1}\""
+			cd .;
+		fi;
 	else
 		command git $@;
 	fi
