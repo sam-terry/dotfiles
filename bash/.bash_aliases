@@ -51,6 +51,7 @@ alias h='home'
 alias tns='tmux new-ses -s'
 alias ga='git add'
 alias gcm='git commit -m'
+alias gcam='git commit -a -m'
 
 ###########################
 ######### TWEAKS ##########
