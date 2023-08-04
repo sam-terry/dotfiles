@@ -55,6 +55,7 @@ alias gcam='git commit -a -m'
 alias tkt='tmux kill-ses -t'
 alias tls='tmux ls'
 alias bpr='vim ~/.bash_profile'
+alias gstatus="git status"
 
 ###########################
 ######### TWEAKS ##########
