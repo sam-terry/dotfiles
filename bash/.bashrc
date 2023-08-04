@@ -66,7 +66,7 @@ chpwd () {
 
 
 # Wrappers for rm; checks to see if removal updated repo
-rm () { builtin rm "$@" && chpwd; }
+#rm () { builtin rm "$@" && chpwd; }
 
 
 # Wrapper for git commit and restore; updates prompt when changes are committed or discarded
@@ -104,3 +104,4 @@ cd .
 
 
 
+export PATH="/opt/homebrew/bin:$PATH"
