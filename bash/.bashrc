@@ -66,7 +66,7 @@ chpwd () {
 	fi
 }
 
-# Wrapper for git; updates prompt when changes are committed
+# Wrapper for git commit and restore; updates prompt when changes are committed or discarded
 git() {
 	if [ $# -gt 0 ] && [ "$1" == "commit" ] ; then
 		if [ $2 == "-m" ] || [ $3 == "-m" ]; then
@@ -74,10 +74,15 @@ git() {
 			command git commit ${@:2:$argcount-1} "${@: -1}\""
 			cd .;
 		fi;
+	elif [ $# -gt 0 ] && [ "$1" == "restore" ] ; then
+		command git restore $@;
+		cd .;
 	else
 		command git $@;
 	fi
 }
+
+
 			
 # Wrapper for vim; updates prompt when changes are made within a repo
 vim() {
