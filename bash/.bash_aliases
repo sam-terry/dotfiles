@@ -34,7 +34,7 @@ alias l='ls -lhF'
 alias ll='ls -lahF'
 alias c='clear'
 alias cl='clear;pwd;l'
-alias s='source ~/.bashrc'
+alias s='source ~/.bash_profile'
 alias brc='vim ~/.dotfiles/bash/.bashrc'
 alias vrc='vim ~/.dotfiles/vim/.vimrc'
 alias oa='vim ~/.dotfiles/bash/.bash_aliases'
@@ -54,6 +54,7 @@ alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias tkt='tmux kill-ses -t'
 alias tls='tmux ls'
+alias bpr='vim ~/.bash_profile'
 
 ###########################
 ######### TWEAKS ##########
