@@ -75,7 +75,7 @@ git() {
 			cd .;
 		fi;
 	elif [ $# -gt 0 ] && [ "$1" == "restore" ] ; then
-		command git restore $@;
+		command git $@;
 		cd .;
 	else
 		command git $@;
@@ -92,5 +92,4 @@ vim() {
 
 ###### LOAD ALIASES #######
 source ~/.dotfiles/bash/.bash_aliases
-
 
