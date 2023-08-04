@@ -41,6 +41,7 @@ turnout() {
 PS1="\[\033[44m\]\[\033[1;37m\]\u@\h \[\033[1;32m\]\[\033[41m\] \[\033[1;37m\]\w \[\033[42m\]\[\033[1;30m\] ✔︎ \[\033[40m\]\[\033[0;33m\] ❯❯ \[\033[00m\]"
 
 
+# Helper functions for detecting uncommitted changes in git repos
 __git_prompt_git() {
 	GIT_OPTIONAL_LOCKS=0 command git "$@"
 }
@@ -58,10 +59,9 @@ parse_git_dirty() {
 }	
 
 
-# Wrapper for cd builtin
+# Wrappers for cd builtin; checks for uncommited changes
 cd () { builtin cd "$@" && chpwd; }
 
-# Checks whether
 chpwd () {
 	if [[ "$(parse_git_dirty)" == "dirty" ]]; then
 		PS1="\[\033[44m\]\[\033[1;37m\]\u@\h \[\033[1;32m\]\[\033[41m\] \[\033[1;37m\]\w \[\033[43m\]\[\033[1;31m\] ✘ \[\033[40m\]\[\033[0;33m\] ❯❯ \[\033[00m\]"
@@ -69,6 +69,8 @@ chpwd () {
 		PS1="\[\033[44m\]\[\033[1;37m\]\u@\h \[\033[1;32m\]\[\033[41m\] \[\033[1;37m\]\w \[\033[42m\]\[\033[1;30m\] ✔︎ \[\033[40m\]\[\033[0;33m\] ❯❯ \[\033[00m\]"
 	fi
 }
+
+
 
 ###### LOAD ALIASES #######
 source ~/.dotfiles/bash/.bash_aliases
