@@ -79,6 +79,11 @@ git() {
 	fi
 }
 			
+# Wrapper for vim; updates prompt when changes are made within a repo
+vim() {
+	command vim;
+	cd .;
+}
 
 ###### LOAD ALIASES #######
 source ~/.dotfiles/bash/.bash_aliases
