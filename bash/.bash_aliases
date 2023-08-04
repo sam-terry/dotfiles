@@ -30,6 +30,7 @@ alias ..........='cd ../../../../..;pwd'
 ###########################
 
 alias v='vim'
+alias ls='ls -G'
 alias l='ls -lhF'
 alias ll='ls -lahF'
 alias c='clear'
