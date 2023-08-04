@@ -66,8 +66,8 @@ chpwd () {
 
 
 # Wrappers for rm and touch; checks to see if removal or addition updated repo
-rm () {builtin rm "$@" && chpwd;}
-touch() {builtin touch "$@" && chpwd;}
+rm () { builtin rm "$@" && chpwd; }
+touch() { builtin touch "$@" && chpwd; }
 
 
 # Wrapper for git commit and restore; updates prompt when changes are committed or discarded
