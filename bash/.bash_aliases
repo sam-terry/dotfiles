@@ -48,7 +48,9 @@ alias cpv='rsync -ah --progress'
 alias lc='wc -l'
 alias xx='exit'
 alias h='home'
-
+alias tns='tmux new-ses -s'
+alias ga='git add'
+alias gcm='git commit -m'
 
 ###########################
 ######### TWEAKS ##########
@@ -66,3 +68,4 @@ alias deks='deks'
 alias dosc='docs'
 alias hoem='home'
 alias cd..='cd ..'
+
