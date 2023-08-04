@@ -1,4 +1,4 @@
-
+cd .
 
 ###########################
 ####### COMMAND PROMPT ####
@@ -37,10 +37,6 @@ turnout() {
 }
 
 
-# Default prompt at startup
-PS1="\[\033[44m\]\[\033[1;37m\]\u@\h \[\033[1;32m\]\[\033[41m\] \[\033[1;37m\]\w \[\033[42m\]\[\033[1;30m\] ✔︎ \[\033[40m\]\[\033[0;33m\] ❯❯ \[\033[00m\]"
-
-
 # Helper functions for detecting uncommitted changes in git repos
 __git_prompt_git() {
 	GIT_OPTIONAL_LOCKS=0 command git "$@"
@@ -70,7 +66,17 @@ chpwd () {
 	fi
 }
 
-
+# Wrapper for git; updates prompt when changes are committed
+git() {
+	if [ $# -gt 0 ] && [ "$1" == "commit" ] ; then
+		shift;
+		command git commit $@;
+		cd .;
+	else
+		command git $@;
+	fi
+}
+			
 
 ###### LOAD ALIASES #######
 source ~/.dotfiles/bash/.bash_aliases
