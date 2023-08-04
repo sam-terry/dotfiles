@@ -30,3 +30,19 @@ turnout() {
 		rm -r PARENT;
 	fi
 }
+
+
+# Print full path for every file in directory
+paths() {
+	if [ -z $1 ]; then
+		dir=$(pwd)	
+	else	
+		dir=$@
+	fi
+
+	for d in $dir; do
+		for e in $(ls $d); do
+			printf "$d/$e\n";
+		done
+	done
+}
