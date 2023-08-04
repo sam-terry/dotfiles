@@ -87,6 +87,11 @@ vim() {
 	chpwd;
 }
 
+
+##### LS COLORS ###########
+LSCOLORS=Gafxhxdxcxegedabagacad;export LSCOLORS
+
+
 ###### LOAD ALIASES #######
 source ~/.dotfiles/bash/.bash_aliases
 
