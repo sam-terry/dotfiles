@@ -37,9 +37,14 @@ turnout() {
 }
 
 
+# Default prompt at startup
+PS1="\[\033[44m\]\[\033[1;37m\]\u@\h \[\033[1;32m\]\[\033[41m\] \[\033[1;37m\]\w \[\033[42m\]\[\033[1;30m\] ✔︎ \[\033[40m\]\[\033[0;33m\] ❯❯ \[\033[00m\]"
+
+
 __git_prompt_git() {
 	GIT_OPTIONAL_LOCKS=0 command git "$@"
 }
+
 
 parse_git_dirty() {
 	FLAGS=('--porcelain')
@@ -52,22 +57,11 @@ parse_git_dirty() {
 	fi
 }	
 
-# PROMPT
-#if [[ "$(parse_git_dirty)" == "dirty" ]]; then
-	#PS1='\[\033[1;31m\]\n\u \[\033[33m\]\@\[\033[32m\] \W \[\033[36m\]>> \[\033[0;37m\] DIRTY'
-#else
-	#PS1='\[\033[1;31m\]\n\u \[\033[33m\]\@\[\033[32m\] \W \[\033[36m\]>> \[\033[0;37m\]'
-#fi
 
+# Wrapper for cd builtin
 cd () { builtin cd "$@" && chpwd; }
-#chpwd () {
-	#if [[ "$(parse_git_dirty)" == "dirty" ]]; then
-		#PS1='\[\033[1;31m\]\n\u \[\033[33m\]\@\[\033[32m\] \W \[\033[36m\]>> \[\033[0;37m\] DIRTY'
-	#else
-		#PS1='\[\033[1;31m\]\n\u \[\033[33m\]\@\[\033[32m\] \W \[\033[36m\]>> \[\033[0;37m\]'
-	#fi
-#}
 
+# Checks whether
 chpwd () {
 	if [[ "$(parse_git_dirty)" == "dirty" ]]; then
 		PS1="\[\033[44m\]\[\033[1;37m\]\u@\h \[\033[1;32m\]\[\033[41m\] \[\033[1;37m\]\w \[\033[43m\]\[\033[1;31m\] ✘ \[\033[40m\]\[\033[0;33m\] ❯❯ \[\033[00m\]"
