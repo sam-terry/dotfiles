@@ -81,7 +81,7 @@ git() {
 			
 # Wrapper for vim; updates prompt when changes are made within a repo
 vim() {
-	command vim;
+	command vim $@;
 	cd .;
 }
 
