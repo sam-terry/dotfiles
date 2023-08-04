@@ -64,7 +64,7 @@ alias gstatus="git status"
 
 alias mkdir='mkdir -p'
 alias calendar='cal' # Both forms should serve the same function
-alias grep='ggrep -P' # Use Perl regular expressions with grep
+alias grep='grep -P' # Use Perl regular expressions with grep
 
 ###########################
 ###### CORRECTIONS ########
