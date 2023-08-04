@@ -47,6 +47,7 @@ alias k='kill'
 alias cpv='rsync -ah --progress'
 alias lc='wc -l'
 alias xx='exit'
+alias h='home'
 
 
 ###########################
