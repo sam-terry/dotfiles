@@ -65,10 +65,10 @@ chpwd () {
 }
 
 
-# Wrapper for rm; checks to see if removal updated repo
-rm () {
-	builtin rm "$@" && chpwd;
-}
+# Wrappers for rm and touch; checks to see if removal or addition updated repo
+rm () {builtin rm "$@" && chpwd;}
+touch() {builtin touch "$@" && chpwd;}
+
 
 # Wrapper for git commit and restore; updates prompt when changes are committed or discarded
 git() {
@@ -76,11 +76,11 @@ git() {
 		if [ $2 == "-m" ] || [ $3 == "-m" ]; then
 			argcount=$(($#-1));
 			command git commit ${@:2:$argcount-1} "${@: -1}\""
-			cd .;
+			chpwd;
 		fi;
 	elif [ $# -gt 0 ] && [ "$1" == "restore" ] ; then
 		command git $@;
-		cd .;
+		chpwd;
 	else
 		command git $@;
 	fi
@@ -91,7 +91,7 @@ git() {
 # Wrapper for vim; updates prompt when changes are made within a repo
 vim() {
 	command vim $@;
-	cd .;
+	chpwd;
 }
 
 ###### LOAD ALIASES #######
@@ -101,5 +101,5 @@ source ~/.dotfiles/bash/.bash_aliases
 
 
 # Update prompt at startup
-cd .
+chpwd
 
