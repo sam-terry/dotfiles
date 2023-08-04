@@ -1,5 +1,3 @@
-cd .
-
 ###########################
 ####### COMMAND PROMPT ####
 ###########################
@@ -92,4 +90,10 @@ vim() {
 
 ###### LOAD ALIASES #######
 source ~/.dotfiles/bash/.bash_aliases
+
+
+
+
+# Update prompt at startup
+cd .
 
