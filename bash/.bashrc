@@ -64,6 +64,12 @@ chpwd () {
 	fi
 }
 
+
+# Wrapper for rm; checks to see if removal updated repo
+rm () {
+	builtin rm "$@" && chpwd;
+}
+
 # Wrapper for git commit and restore; updates prompt when changes are committed or discarded
 git() {
 	if [ $# -gt 0 ] && [ "$1" == "commit" ] ; then
